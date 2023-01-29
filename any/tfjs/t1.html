@@ -1,0 +1,8 @@
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.2.0/tf.es2017.min.js'></script> 
+<script type="text/javascript">
+const model = tf.sequential();
+model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+model.compile({loss:'meanSquaredError', optimizer:'sgd'});
+model.summary();
+</script>

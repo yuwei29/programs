@@ -1,0 +1,9 @@
+import time
+t1= time.time()
+s=0
+it=int(1e7)
+for i in range(it):
+    s+=i%3
+t2 = time.time()
+print(s)
+print(t2-t1)

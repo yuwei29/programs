@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/browser-cjs@1.0.3/require.min.js"></script> -->
+    <script src="fengari-web.js"></script>
+</head>
+<body>
+    <section>
+        <div class="section__content">
+            <h2>Test it out!</h2>
+            <div class="repl">
+                <code id="fengari-console"></code>
+                <div class="fengari-input-container">
+                    <label id="fengari-prompt" for="fengari-input">→ </label>
+                    <textarea class="lua" id="fengari-input" rows="1" placeholder="Type some Lua here..."></textarea>
+                </div>
+            </div>
+
+            This REPL is itself <a href="https://github.com/fengari-lua/fengari.io/blob/master/static/lua/web-cli.lua">written in Lua</a>.
+        </div>
+    </section>
+    <script type="application/lua">
+        function norm (x, y)
+      local n2 = x^2 + y^2
+      return math.sqrt(n2)
+             end
+    
+    function twice (x)
+      return 2*x    end
+    n = norm(3.4, 1.0)
+print(twice(n)) 
+    </script>
+</body>
+</html>
