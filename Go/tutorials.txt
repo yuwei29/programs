@@ -1,0 +1,5 @@
+https://go.dev/tour/concurrency/1
+https://go.dev/play/
+https://go.dev/doc/effective_go#web_server
+https://go.dev/doc/tutorial/call-module-code
+https://coderwall.com/p/wohavg/creating-a-simple-tcp-server-in-go
