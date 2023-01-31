@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --back: rgb(73, 73, 73);
+    --key: rgb(194, 194, 194);
+    --keyh: rgb(212, 212, 212);
+    --keya: rgb(173, 173, 173);
+    --imp: rgb(255, 167, 167);
+    --imph: rgb(240, 184, 184);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(68, 68, 68);
+    background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        rgba(97, 97, 97, 0.5) 50%
+    );
+    background-size: 50px 50px;
+}
+
+button {
+    appearance: none;
+    outline: none;
+    border: none;
+    user-select: none;
+}
+
+.keyboard button:hover {
+    background-color: var(--keyh);
+}
+
+.keyboard button:active {
+    background-color: var(--key);
+}
+
+.calc {
+    width: 300px;
+    height: 450px;
+    background-color: rgb(148, 148, 148);
+    border-radius: 20px;
+    box-shadow: 25px 25px 60px rgba(3, 3, 3, 0.5);
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.calc > button {
+    width: 20%;
+    height: 5%;
+    background-color: var(--key);
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.theme {
+    width: 150px;
+    height: 80px;
+    font-size: 30px;
+    position: absolute;
+    /* transition: 1s; */
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.screen {
+    width: 100%;
+    height: 13%;
+    background-color: rgb(89, 91, 109);
+    margin-top: 10%;
+    font-size: 30px;
+    text-align: right;
+    padding: 6px;
+    padding-left: 11px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.keyboard {
+    width: auto;
+    height: 60%;
+    /* margin-top: 15%; */
+    margin: 5% 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 20%);
+    /* border: 1px solid #000; */
+}
+
+.keyboard button {
+    margin: 2.5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight:lighter;
+    background-color: var(--key);
+}
+
+.keyboard button:nth-child(16) {
+    grid-row: span 2;
+    text-align: center;
+}
+
+button.imp {
+    background-color: var(--imp);
+}
+button.imp:hover {
+    background-color: var(--imph);
+}
+button.imp:active {
+    background-color: var(--imp);
+}
+
+button.affected {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    /* border-top: 1.5px solid rgba(255, 255, 255, 0.44); */
+    /* border-left: 1.5px solid rgba(255, 255, 255, 0.44); */
+}
+button.affected:hover {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+}
+button.affected:active {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(0px);
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
+}

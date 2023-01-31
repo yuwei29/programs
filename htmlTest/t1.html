@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .screen {
+            height: 100px;
+            border: 1px solid green;
+            margin-top: 50px;
+            font-size: 30px;
+            text-align: right;
+            padding: 6px;
+            padding-left: 11px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea class="screen" id="screen1">0</textarea>
+    <button onclick="update()">get fib</button>
+    <p>time cost: <span id="cost1">0</span> ms</p>
+    <div class="screen" id="screen2" >0</div>
+    <textarea class="screen" id="screen3">0</textarea>
+    <button onclick="sumN()">sum of 1--N using JavaScript</button>
+    <p>time cost: <span id="cost2">0</span> ms</p>
+    <div class="screen" id="screen4" >0</div><br><br><br><br>
+    <button onclick="fromOtherLang()">sum of 1--N using C++</button>
+    <p>time cost: <span id="cost3">0</span> ms</p>
+    <div class="screen" id="screen5" >0</div>
+    <script>
+        let screen1 = document.getElementById('screen1')
+        let screen2 = document.getElementById('screen2')
+        let screen3 = document.getElementById('screen3')
+        let screen4 = document.getElementById('screen4')
+        let screen5 = document.getElementById('screen5')
+        let cost1 = document.getElementById('cost1')
+        let cost2 = document.getElementById('cost2')
+        let cost3 = document.getElementById('cost3')
+        function fib(x) {
+            let a = 0, b = 1,tmp=0
+            while (x > 0) {
+                tmp = a
+                a = b
+                b += tmp
+                x -= 1
+            }
+            return a
+        }
+        function update() {
+            let t1 = Date.now()
+            screen2.innerHTML = fib(Number(screen1.value))
+            let t2 = Date.now()
+            cost1.innerHTML = t2-t1
+        }
+        function sumN(){
+            let num = Number(screen3.value), sum = 0
+            let t1 = Date.now()
+            for(let i=1;i<=num;i++){
+                sum += i
+            }
+            let t2 = Date.now()
+            screen4.innerHTML = sum;
+            cost2.innerHTML = t2-t1
+        }
+        async function fromOtherLang(){
+            let num = screen3.value
+            let t1 = Date.now()
+            let url = new URL("http://1.15.226.74:6379/sum")
+            url.searchParams.append("num",num)
+            let res = await fetch(url)
+            sum = await res.text()
+            let t2 = Date.now()
+            screen5.innerHTML = sum
+            cost3.innerHTML = t2-t1
+        }
+    </script>
+</body>
+
+</html>

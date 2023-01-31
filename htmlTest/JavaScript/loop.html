@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>隔一段时间执行一次</p>
+    <button onclick="trig()">show time</button>
+    <button onclick="stop()">stop showing</button>
+    <div id="box"></div>
+    <script>
+        let timerID
+        function say(){
+            document.querySelector('#box').textContent=new Date()
+        }
+        function trig(){
+            timerID = setInterval(say,3000)
+        }
+        function stop(){
+            clearInterval(timerID)
+            document.querySelector('#box').textContent=''
+        }
+        
+    </script>
+</body>
+</html>

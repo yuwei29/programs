@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animation</title>
+        <style>
+            .anim{
+                width:500px;
+                height:500px;
+                background-color: red;
+                animation:myAnim 3s linear 0s infinite;
+            }
+
+            .anim:hover{
+                animation-play-state: paused;
+            }
+
+            @keyframes myAnim{
+                from{
+                    background-color: red;
+                }
+                50%{
+                    /* width:200px; */
+                    background-color: blue;
+                }
+                to{
+                    background-color: red;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>This is an animation demo</h1>
+        <div class="anim"></div>
+    </body>
+</html>

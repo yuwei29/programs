@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="surprise()">平平无奇的按钮</button>
+    <button id="btn">another button</button>
+    <div>
+        <button name="btn3">按钮3</button>
+    </div>
+    <script>
+        function surprise(){
+            alert('how dare you!')
+        }
+        var btn = document.getElementById('btn')
+        btn.onclick = function(){
+            alert('按钮')
+        }
+        var btn3 = document.getElementsByName('btn3')[0]
+        btn3.addEventListener('click',function(){
+            alert('按钮3')
+        })
+        btn3.addEventListener('click',function(){
+            alert('按钮3的另一个提示')
+        })
+    </script>
+</body>
+</html>

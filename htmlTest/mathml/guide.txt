@@ -1,0 +1,23 @@
+https://developer.mozilla.org/en-US/docs/Web/MathML
+Firefox full support
+
+MathML Core is a subset with increased implementation details based on rules from LaTeX and the Open Font Format. It is tailored for browsers and designed specifically to work well with other web standards including HTML, CSS, DOM, JavaScript.
+
+Below you will find links to documentation, examples, and tools to work with MathML. MDN uses MathML Core as a reference specification but, due to an erratic standardization history, legacy MathML features may still show up in existing implementations and web content.
+
+https://www.zhihu.com/question/36936998
+为什么 LaTeX 没有在网页设计中得到应用？ 
+Silvia
+瀚海星云
+4 人赞同了该回答
+文章排版不论。数学公式排版方面，html有自己的标记语言
+
+MathML
+。
+
+发布于 2015-10-28 14:33
+
+
+https://developer.mozilla.org/en-US/docs/Learn/MathML/First_steps/Getting_started
+
+

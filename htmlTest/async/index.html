@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const a = 'hello'
+    const f = function () {
+      let s = 0
+      for (let i = 0; i < 1e9; i++) {
+        s += (i % 10 - 4.5)
+      }
+      console.log(s)
+    }
+    f()
+    console.log(a);
+    const f2 = function (f1) {
+      console.log('this is from f2');
+      f1()
+    }
+    f2(f)
+    console.log('different implementation');
+
+    function doStep1(init, f) {
+      const result = init + 1;
+      f(result);
+    }
+
+    function doStep2(init, f) {
+      const result = init + 2;
+      f(result);
+    }
+
+    function doStep3(init, f) {
+      const result = init + 3;
+      f(result);
+    }
+
+    function doOperation() {
+      doStep1(0, (result1) => {
+        doStep2(result1, (result2) => {
+          doStep3(result2, (result3) => {
+            console.log(`result: ${result3}`);
+          });
+        });
+      });
+    }
+
+    doOperation();
+    setTimeout(()=>{console.log('from setTimeout')},10000)
+    function sleep(ms){
+      const start = Date.now(),end = start+ms
+      while(Date.now()<end);
+      return
+    }
+    const doCalculationAsync = async function(f){
+      f()
+    }
+    doCalculationAsync(callback1);  //stupid code from https://www.htmlgoodies.com/javascript/asynchronous-programming-in-javascript/
+    console.log('Process finished');
+    // call when doCalculationAsync completes
+    function callback1(error) {
+      sleep(5000)
+      if (!error) console.log('Calculation completed');
+    }
+    
+  </script>
+</body>
+
+</html>

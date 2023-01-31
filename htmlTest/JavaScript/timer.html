@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>timer</p>
+    <button onclick="delayedMessage();">Show a message after two seconds</button>
+    <button onclick="clearMessage();">Cancel message before it happens</button>
+
+    <div id="output"></div>
+    <script>
+        //setTimeout(()=>{console.log('execute after 3 seconds');},3000)
+        let timeoutID;
+
+        function setOutput(outputContent) {
+            document.querySelector('#output').textContent = outputContent;
+        }
+
+        function delayedMessage() {
+            setOutput('');
+            timeoutID = setTimeout(setOutput, 2 * 1000, 'That was really slow!');
+        }
+
+        function clearMessage() {
+            clearTimeout(timeoutID);
+        }
+    </script>
+</body>
+
+</html>

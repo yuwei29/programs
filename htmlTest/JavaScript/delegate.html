@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>l1</li>
+        <li>l2</li>
+        <li>l3</li>
+    </ul>
+    <script>
+        // var list = document.getElementById('list')
+        var list = document.querySelector('ul')
+        list.addEventListener('click',function(e){
+            console.log(e.target.innerHTML);
+        })
+    </script>
+</body>
+</html>
