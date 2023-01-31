@@ -1,0 +1,13 @@
+https://github.com/openai/gym
+https://github.com/Farama-Foundation/Gymnasium
+https://gymnasium.farama.org/
+https://mujoco.org/
+
+https://spinningup.openai.com/en/latest/
+
+http://web.stanford.edu/class/cs234/modules.html
+https://www.bilibili.com/video/BV18b411e733
+【中英文字幕】CS294-112（2018秋季）伯克利大学深度强化学习课程
+http://rail.eecs.berkeley.edu/deeprlcourse-fa18/
+https://github.com/berkeleydeeprlcourse/homework
+https://github.com/xuwd11/cs294-112_hws/blob/master/hw2/train_pg_f18.py
