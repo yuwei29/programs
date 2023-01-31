@@ -1,0 +1,9 @@
+class T:
+  def __init__(self,x):
+    self.x = x
+    self.show()
+
+  def show(self):
+    print("the value of self.x is",self.x)
+
+t = T(5)

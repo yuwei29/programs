@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a flask test</h1>
+	<button id="b1">change p1</button>
+	<p id="p1">para 1</p>
+	<p id="p2">para 2</p>
+    <!-- <script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+	    p1 = document.getElementById("p1")
+		p2 = document.getElementById("p2")
+		b1 = document.getElementById("b1")
+		function load(){
+		  axios.get('http://localhost:5000/init').then(
+            res=>{
+                p1.innerHTML = res.data.p1;
+				p2.innerHTML = res.data.p2;
+            }
+          )
+		}
+		load()
+		b1.addEventListener('click',function(){
+		  axios.post('http://localhost:5000/change',{
+		    content:"这是一段修改后的中文内容"
+		  }).then(
+            res=>{
+                p1.innerHTML = res.data;
+            }
+          )
+		})
+        axios.get('http://localhost:5000').then(
+            res=>{
+                console.log(res.data);
+            }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 1.989126205444336 ms.
+Computing time: 4.987955093383789 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test33.py
+Data generation time: 2.9904842376708984 ms.
+Computing time numpy: 4.978179931640625 ms.
+Computing time list: 61.797142028808594 ms.
+B==B_ is True
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 2.3643970489501953 ms.
+Computing time: 2.517223358154297 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 7.575273513793945 ms.
+Computing time: 3.9887428283691406 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 6.688833236694336 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 9.814023971557617 ms.
+Computing time: 5.851507186889648 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 10.274887084960938 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 8.692026138305664 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 7.1258544921875 ms.
+Computing time: 4.736423492431641 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 9.443283081054688 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 7.939815521240234 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 9.516000747680664 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 10.251760482788086 ms.
+Computing time: 5.789756774902344 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 0.0 ms.
+Computing time: 10.581731796264648 ms.
+PS D:\personal\programs\pythoncode\plain> & D:/Apps/Python/Python310/python.exe d:/personal/programs/PythonCode/plain/test32.py
+Data generation time: 9.57345962524414 ms.
+Computing time: 5.125522613525391 ms.
+PS D:\personal\programs\pythoncode\plain>
+

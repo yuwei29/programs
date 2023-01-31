@@ -1,0 +1,33 @@
+class Node:
+  def __init__(self,v=None):
+    self.v = v
+    self.l = None
+    self.r=None
+    
+  def addLeft(self,n):
+    self.l=n 
+    
+  def addRight(self,n):
+    self.r = n  
+    
+def inTrav(n):
+  l = [] 
+  if n.l:
+    l+=inTrav(n.l)
+  l.append(n.v)
+  if n.r:
+    l+=inTrav(n.r) 
+  return l 
+  
+def test():
+  n = Node(3)
+  l = Node()
+  r = Node(5)
+  l.addRight(Node(2))
+  r.addLeft(Node(4))
+  n.addLeft(l)
+  n.addRight(r)
+  res = inTrav(n)
+  print(res)
+  
+test()
