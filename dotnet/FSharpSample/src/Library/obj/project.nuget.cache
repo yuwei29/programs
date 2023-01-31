@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zGGoCsjEEH8DmL/XaPDLDQ1h18UVVbBBgWcpCRX6ssx779wfjH+8jgdc7Zp/vrKPW6KR624bOmhv8BMJxLBCow==",
+  "success": true,
+  "projectFilePath": "D:\\personal\\programs\\dotnet\\FSharpSample\\src\\Library\\Library.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hasee\\.nuget\\packages\\fsharp.core\\7.0.0\\fsharp.core.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

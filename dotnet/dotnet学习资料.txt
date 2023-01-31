@@ -1,0 +1,3 @@
+https://learn.microsoft.com/zh-cn/dotnet/core/tools/
+https://learn.microsoft.com/zh-cn/dotnet/fundamentals/
+https://learn.microsoft.com/zh-cn/dotnet/core/tutorials/

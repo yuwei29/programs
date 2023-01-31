@@ -1,0 +1,13 @@
+D:\personal\programs\dotnet\FSharpSample\src\Library\bin\Debug\net7.0\Library.deps.json
+D:\personal\programs\dotnet\FSharpSample\src\Library\bin\Debug\net7.0\Library.dll
+D:\personal\programs\dotnet\FSharpSample\src\Library\bin\Debug\net7.0\Library.pdb
+D:\personal\programs\dotnet\FSharpSample\src\Library\bin\Debug\net7.0\Library.xml
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.fsproj.AssemblyReference.cache
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.AssemblyInfoInputs.cache
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.AssemblyInfo.fs
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.fsproj.CoreCompileInputs.cache
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.dll
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\refint\Library.dll
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.xml
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\Library.pdb
+D:\personal\programs\dotnet\FSharpSample\src\Library\obj\Debug\net7.0\ref\Library.dll
