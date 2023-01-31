@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cblk {
+            width : 1000px;
+            height: 500px;
+            /* border: 3px solid green; */
+            font-size:large;
+            margin:0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Code snippet for addition of two numbers in javascript</p>
+    <pre><code>
+        function add (a,b) {
+            sum = a + b;
+            return sum;
+        }
+    </code>
+    </pre>
+    <br>
+    <br>
+    <p>C++ Code example</p>
+    <p>below is some code from https://github.com/meltwater/served </p>
+    <div class="cblk">
+    <pre><code>
+#include &lt;served/served.hpp&gt;
+
+int main(int argc, char const* argv[]) {
+	// Create a multiplexer for handling requests
+	served::multiplexer mux;
+
+	// GET /hello
+	mux.handle("/hello")
+		.get([](served::response & res, const served::request & req) {
+			res << "Hello world!";
+		});
+
+	// Create the server and run with 10 handler threads.
+	served::net::server server("127.0.0.1", "8080", mux);
+	server.run(10);
+
+	return (EXIT_SUCCESS);
+}
+    </code>
+    </pre>
+    </div>
+</body>
+
+</html>

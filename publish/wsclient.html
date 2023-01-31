@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <pre id="chat">chatroom</pre><br>
+        <textarea name="" id="input" cols="30" rows="10" placeholder="type here"></textarea>
+        <button onclick="send()">send</button>
+    </div>
+    <script>
+        let wsc = new WebSocket('ws://192.168.43.117:8083')
+        wsc.onmessage = function(event) {
+            let chat = document.getElementById("chat")
+            chat.innerHTML += '\n'+'server: '+event.data
+        }
+        function send(){
+            let text = document.getElementById("input").value;
+            chat.innerHTML += '\n'+'you: '+text
+            wsc.send(text)
+        }
+    </script>
+</body>
+</html>

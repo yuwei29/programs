@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+        text-decoration: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/browser-cjs@1.0.3/require.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
+</head>
+
+<body>
+    <style>
+        #content img {
+            max-width:800px;
+        }
+    </style>
+    <div id="content" style="max-width:800px;margin-left:auto;margin-right:auto;
+    margin-bottom:80px;font-size:18px;"></div>
+    
+    <!-- <script src="./markdown-it.min.js"></script> -->
+    <script>
+        // mdrender = window.markdownit();
+        let mdfile = "index.md"
+        let queryString = window.location.search;
+        if(queryString!=''){
+            let urlParams = new URLSearchParams(queryString);
+            mdfile = urlParams.get('md')
+            mdfile += '.md'
+        }
+        var hljs = require('./highlight.min.js');
+        var md = require('./markdown-it.min.js')({
+            highlight: function (str, lang) {
+                if (lang && hljs.getLanguage(lang)) {
+                    try {
+                        return hljs.highlight(str, { language: lang }).value;
+                    } catch (__) { }
+                }
+
+                return ''; // use external default escaping
+            }
+        });
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", mdfile); // asking for index.md
+        xhr.onload = function () // the onload callback is (asynchronously) sent when the file finishes loading
+        {
+            let text = xhr.responseText;
+            document.getElementById("content").innerHTML = md.render(text) // sets page content to rendered text
+        }
+        xhr.send(); // actually sends the request
+    </script>
+</body>
+
+</html>

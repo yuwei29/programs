@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Fetch API</h1>
+<h2>The fetch() Method</h2>
+<textarea id="addr">baidu.com</textarea>
+<br>
+<button onclick="getText()">update below content</button>
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+async function getText() {
+  let addr = document.getElementById("addr")
+  addr = "http://"+addr.value;
+  let x = await fetch(addr);
+  let y = await x.text();
+  document.getElementById("demo").innerHTML = y;
+}
+</script>
+
+</body>
+</html>
