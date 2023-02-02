@@ -1,0 +1,17 @@
+const http = require('http');
+// make a request object
+const options = {
+host:'www.baidu.com',
+method:'GET'}
+const request = http.request(options, res => {
+  // Do stuff with the response object
+//console.log(res.statusCode)
+});
+// make the request
+let f=(n)=>{
+let t1 = Date.now()
+for(let i=0;i<n;i++){ request.end();}
+let t2=Date.now()
+console.log(t2-t1)
+}
+f(100000000)
