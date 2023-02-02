@@ -1,0 +1,52 @@
+const readline =require('readline')
+const http = require('http')
+
+async function prep(){
+let n=1000
+let dur=5
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: false
+  });
+let i=0
+for await (const line of rl) {
+    if(i==0){  n = Number(line) }
+else if(i==1){ dur = Number(line) }
+else { break}
+i++
+}
+return [n,dur]
+}
+
+const options = {
+host:'www.baidu.com',
+method:'GET'}
+
+class Req{
+statusCode=0
+date='date'
+request = http.request(options, res => {
+this.statusCode=res.statusCode;this.date=res.headers.date
+})
+send(){this.request.end()}
+}
+
+async function f(){
+const arr=await prep()
+const n=arr[0]
+const dur =arr[1]
+let reqs = []
+for(let i=0;i<n;i++){reqs.push(new Req() )}
+let t1 = Date.now()
+for(let i=0;i<n;i++){ reqs[i].send();}
+let t2=Date.now()
+console.log(t2-t1)
+logRes=(reqs)=>{
+console.log(reqs[0].statusCode, reqs[0].date)
+console.log(reqs[n-1].statusCode,reqs[n-1].date)
+}
+setTimeout(logRes,dur*1000,reqs)
+
+}
+f()
