@@ -56,7 +56,7 @@ PS D:\personal\programs\any\include多余文件> ./has多余文件withOs
 12
 ```
 
-用clang编译include多余文件似乎不会增大exe体积
+用clang编译，include多余文件似乎不会增大exe体积
 
 ```sh
 PS D:\personal\programs\any\include多余文件> clang++ no多余文件.cc -o no多余文件Clang.exe
