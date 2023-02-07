@@ -1,0 +1,126 @@
+https://www.techiedelight.com/return-multiple-values-function-c/
+Return multiple values from a function in C
+Google Translate Icon
+This post will discuss how to return multiple values from a function in C.
+
+1. Pointers in C
+We can use pointers in C to return more than one value from the function by passing pointers as function parameters and use them to set multiple values, which will then have visibility in the caller function.
+
+#include <stdio.h>
+ 
+// Function to return multiple values using pointers
+void initialize(int *a, int *b, char *c)
+{
+    *a = 10;
+    *b = 20;
+    *c = 'A';
+}
+ 
+// Return multiple values from a function in C
+int main(void)
+{
+    int a, b;
+    char c;
+ 
+    initialize(&a, &b, &c);
+    printf("a = %d, b = %d, c = %c", a, b, c);
+ 
+    return 0;
+}
+Download  Run Code
+
+Output:
+
+a = 10, b = 20, c = A
+
+2. Structures in C
+We can also use structures in C to return more than one value from the function. We know that a structure is a user-defined datatype in C that can hold several data types of the same or different kind.
+
+The idea is to create a struct containing all required data types as its members and return that struct from our function. Then we can retrieve the desired values from the struct inside our caller function.
+
+#include <stdio.h>
+ 
+// wrap the multiple values into a struct
+struct Tuple {
+    int a, b;
+    char c;
+};
+ 
+// Function to return multiple values using struct
+struct Tuple initialize()
+{
+    struct Tuple tuple = { 10, 20, 'A' };
+ 
+    return tuple;
+}
+ 
+// Return multiple values from a function in C
+int main(void)
+{
+    int a, b;
+    char c;
+ 
+    struct Tuple tuple = initialize();
+ 
+    a = tuple.a;
+    b = tuple.b;
+    c = tuple.c;
+ 
+    printf("a = %d, b = %d, c = %c", a, b, c);
+ 
+    return 0;
+}
+Download  Run Code
+
+Output:
+
+a = 10, b = 20, c = A
+
+3. Array
+We have seen how to return values of different data types from the function using pointers and struts. Now, if all values are of the same data type, we can encapsulate the values in an array and return that array, as shown below:
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+// Function to return multiple values using an array
+int* initialize()
+{
+    // Important: Dynamically allocate memory
+    int *temp = (int*) malloc(sizeof(int) * 3);
+ 
+    *temp = 10;
+    *(temp + 1) = 20;
+    *(temp + 2) = 30;
+ 
+    return temp;
+}
+ 
+// Return multiple values from a function in C
+int main(void)
+{
+    int a, b, c;
+ 
+    int *arr = initialize();
+ 
+    a = arr[0];
+    b = arr[1];
+    c = arr[2];
+ 
+    printf("a = %d, b = %d, c = %d", a, b, c);
+ 
+    // free memory
+ 
+    return 0;
+}
+Download  Run Code
+
+Output:
+
+a = 10, b = 20, c = 30
+
+ 
+We should not use this approach as the variable information is not passed to the caller function. For example, we’re using the array’s index to retrieve the values of our variables. Also, note that we have to allocate the array dynamically in a heap. If we use the static array, it ceases to exist when we exit the function, and accessing it inside the caller function will result in undefined behavior.
+
+That’s all about returning multiple values from a function implementation in C.
+
+https://www.geeksforgeeks.org/how-to-return-multiple-values-from-a-function-in-c-or-cpp/

@@ -1,0 +1,9 @@
+https://github.com/uxmal/pytocs
+About
+Converts Python source to C#
+https://github.com/lukasmartinelli/py14
+About
+Python to C++ 14 transpiler
+https://github.com/ASDAlexander77/cs2cpp
+About
+C# to C++ transpiler (Cs2Cpp) (Powered by Roslyn)

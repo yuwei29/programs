@@ -1,0 +1,10 @@
+def _sub_subsub_mod3_f(x):
+  return x*x
+def _sub_mod1_f(x):
+  return x+_sub_subsub_mod3_f(x)
+def _sub_mod2_f(x):
+  return x-_sub_subsub_mod3_f(x)
+def f(x):
+  return _sub_mod1_f(x)+_sub_mod2_f(x)
+def g(x):
+  return _sub_mod1_f(x+2)

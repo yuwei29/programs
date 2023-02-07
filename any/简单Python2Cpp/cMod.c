@@ -1,0 +1,1 @@
+int f(int w,int x,int b){return w*x+b;}

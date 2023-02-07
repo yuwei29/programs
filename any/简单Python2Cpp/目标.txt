@@ -1,0 +1,48 @@
+数据范围：仅涉及 32位有符号整数，即 int;    True视为1，False视为0
+运算类型：仅涉及 + - * //  % 
+逻辑运算类型：仅涉及  and or not 
+lambda函数支持：仅支持纯函数，即不捕获环境变量的函数
+支持 import ... as ... , 不支持 from ... import ... 
+支持 if __name__ == '___main__':   编译为Cpp后统一替换为 unitTest()  //放弃对此的支持
+支持 list, 视情况用 数组 或 vector 表示     //该支持优先级较低
+不支持class
+不支持输入输出，不引入 stdio iostream 网络库, 输入输出 仍然交由python实现
+不支持直接运行，不支持main函数，不支持全局变量，无main函数，仅考虑编译为动态库情形，不考虑静态库 
+后续可以添加专门的 处理输入输出的模块，但其优先级很低
+不考虑内存不足的情况，不考虑内存管理，不考虑垃圾回收
+不考虑浅拷贝，深拷贝，因为数据类型仅有 int 
+可选生成的 Cpp文件 的类型： 观赏/生产 ； 生产 对应 js中的 .min.js， 把所有内容扔到一个txt文件里，变量名仅用
+[a-zA-Z],当然暴露给caller的函数名不会变
+函数 体内可以包含 list , 但是 函数的parameters和return value 必须是 整数
+只处理不含注释不含字符串Literal的python文件
+文件夹名称不包含 '.' , 文件名除'.py'外不包含'.'
+文件夹名称和文件名称不可包含'_'
+文件中不可包含 '_', 变量名，函数名均不可包含'_'
+调用函数时 函数名前需要有空格 比如 +f(x) 应该写成 + f(x)
+
+考虑sort如果可以用函数为参数，则能极大提高灵活性
+所以 打算 支持 函数 作为 first class type 
+但该计划优先级较低
+chain call;callback; f1().then(f2..).then(f3..)
+func as para and return value 
+函数作为参数和返回值 用处很多
+限时 before 20230206T2023GMT+8 
+--------------------------
+refs:
+https://www.zhihu.com/question/29823322      Python 有什么不为人知的坑？
+涉及 字符串  数组/list  class  浮点数  lambda函数   嵌套函数   函数as参数/返回值 时
+果然就容易出现坑
+
+
+Jackpop​​
+哈尔滨工业大学 计算数学硕士
+9 人赞同了该回答
+拷贝是Python学习过程中很容易被忽略，但是在项目开发过程中起着重要作用的一个概念。
+有很多开发者由于忽视这一点，甚至导致项目中出现很严重的BUG。
+
+https://www.scaler.com/topics/function-overloading-in-python/
+Python does not support function overloading as in other languages
+所以 可以不考虑 函数重载
+
+-----------
+update:  未在限定时间内完成    2023-02-06T12:38:16Z
