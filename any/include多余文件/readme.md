@@ -1,5 +1,5 @@
 测试发现include多余文件确实会增大exe体积  
-···sh
+```sh
 PS D:\personal\programs\any\include多余文件> g++ no多余文件.cc -o no多余文件
 PS D:\personal\programs\any\include多余文件> ls
 
