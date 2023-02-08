@@ -1,0 +1,2 @@
+增加对list转C语言 array 或 C语言 struct 的支持
+增加对不含方法的class转C语言struct的支持
