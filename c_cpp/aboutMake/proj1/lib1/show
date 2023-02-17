@@ -1,0 +1,5 @@
+#include<iostream>
+void show(){
+using namespace std;
+cout<<"link start\n";
+}

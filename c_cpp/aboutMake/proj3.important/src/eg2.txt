@@ -1,0 +1,32 @@
+[include]
+"fdbfb.h"
+<vector>
+
+[import]
+[[module]]
+os
+time
+
+[[relative]]
+dir1/dir12/file1
+dir2/dir22/file3
+../dir2/file2
+
+[[absolute]]
+d:/apps/diy/now
+d:/apps/diy/fileSize
+
+[[url]]
+https://github.com/someName/someRepo
+https://cdn.someCompany.com/someDir/someFile
+http://cdn.someDomain.net/someDir/someFile
+
+...
+
+
+[unitTest]
+int main(){
+auto s = "flnxbd";
+auto v = f(s);
+show(v);
+}

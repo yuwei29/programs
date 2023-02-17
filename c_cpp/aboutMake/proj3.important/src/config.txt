@@ -1,0 +1,8 @@
+[module.path]
+#对于每个源文件，默认包含当前文件夹
+someVeryLongPath/anotherVeryLongSubPath
+...
+[import.map]
+square=module/shape/square
+#上述配置也可以写在源文件里
+#写在config.txt means 相对路径以 src 为 base 

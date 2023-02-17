@@ -1,0 +1,17 @@
+[import]
+mod1/mod12   //此为以当前文件所在dir为base路径
+mod2/mod22
+mod3/mod31
+../somePath  //goto up layer path 调用系统的path resolver即可
+.g/mod1  //以ypath为base, ypath类似于GOPATH , g means global 
+.g/mod2
+.ym/mod1   //以ymodule为base，ymodule类似于local node_modules 
+.ym/mod2
+.ym/mod3
+.mp/mod1  // config   module.path
+.im/mod1  // config import.map  
+.a/somePath  // absolute path 
+.u/someUrl   // url 
+
+[code]
+...
