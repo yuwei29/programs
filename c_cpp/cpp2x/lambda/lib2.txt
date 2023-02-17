@@ -1,0 +1,4 @@
+namespace lib2{auto f=[](){
+auto f_internel = [](){return "string from internal function\n";};
+return f_internel();
+};}
