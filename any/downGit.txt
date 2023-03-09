@@ -1,0 +1,2 @@
+Download a single folder or directory from a GitHub repo
+https://minhaskamal.github.io/DownGit/#/home
